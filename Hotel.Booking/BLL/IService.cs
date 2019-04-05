@@ -10,6 +10,6 @@ namespace Hotel.Booking.BLL
     public interface IService
     {
         BookingResult BookHotel(Order item);
-        void CalcLeftRooms(Order item);
+        int CalcLeftRooms(Order item);
     }
 }
