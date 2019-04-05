@@ -12,7 +12,6 @@ namespace Hotel.Booking.BLL
         protected string HotelName;
         protected int HotelLevel;
         protected int TotalRooms;
-        //protected int LeftRooms;
 
         protected List<Order> BookedList;
 
@@ -21,7 +20,6 @@ namespace Hotel.Booking.BLL
             HotelName = name;
             HotelLevel = level;
             TotalRooms = rooms;
-            //LeftRooms = rooms;
             BookedList = new List<Order>();
         }
         public BookingResult BookHotel(Order item)
@@ -40,7 +38,6 @@ namespace Hotel.Booking.BLL
             res.BookingCount = item.RoomCount;
             res.IsValid = true;
 
-            //CalcLeftRooms(item);
             BookedList.Add(item);
 
             return res;
@@ -48,8 +45,8 @@ namespace Hotel.Booking.BLL
 
         public int CalcLeftRooms(Order item)
         {
-            //LeftRooms -= item.RoomCount;
-            List<Order> existingOrderList = BookedList.Where(o => o.CheckOutDate <= item.CheckInDate).ToList();
+            List<Order> existingOrderList = BookedList.Where(o => item.CheckInDate <= o.CheckOutDate
+            && o.HotelName.Equals(item.HotelName, StringComparison.CurrentCultureIgnoreCase)).ToList();
             if (existingOrderList != null)
             {
                 return TotalRooms - existingOrderList.Sum(o => o.RoomCount);
