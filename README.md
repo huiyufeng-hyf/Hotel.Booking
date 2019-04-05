@@ -27,7 +27,7 @@ Here are the prerequisites info:
 		</tr>
 		<tr>
 			<td>LR</td>
-			<td>***(4 star)</td>
+			<td>***</td>
 			<td>420</td>
 		</tr>
 		<tr>
@@ -38,9 +38,9 @@ Here are the prerequisites info:
 	</tbody>
 </table>
 Here are the sample orders input from file stream (with format of "ClientName BrandName Check-In-Date Check-Out-Date BookingRooms"):
-AAA JW 2019-04-05 2019-04-10 300
-BBB JW 2019-04-05 2019-04-07 100
-CCC LR 2019-04-01 2019-04-05 200
+AAA JW 2019-04-05 2019-04-10 300<br/>
+BBB JW 2019-04-05 2019-04-07 100<br/>
+CCC LR 2019-04-01 2019-04-05 200<br/>
 
 Here are some test cases with expected output result:
 AAA JW 2019-04-01 2019-04-02 380
