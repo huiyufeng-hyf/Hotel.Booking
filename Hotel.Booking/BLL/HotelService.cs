@@ -45,9 +45,8 @@ namespace Hotel.Booking.BLL
 
         public int CalcLeftRooms(Order item)
         {
-            List<Order> existingOrderList = BookedList.Where(o => item.CheckInDate <= o.CheckOutDate
-            && o.HotelName.Equals(item.HotelName, StringComparison.CurrentCultureIgnoreCase)).ToList();
-            if (existingOrderList != null)
+            List<Order> existingOrderList = BookedList.Where(o => item.CheckInDate <= o.CheckOutDate).ToList();
+            if (existingOrderList != null && existingOrderList.Count > 0)
             {
                 return TotalRooms - existingOrderList.Sum(o => o.RoomCount);
             }
