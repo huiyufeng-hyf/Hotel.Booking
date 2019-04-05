@@ -37,29 +37,29 @@ Here are the prerequisites info:
 		</tr>
 	</tbody>
 </table>
-Here are the sample orders input from file stream (with format of "ClientName BrandName Check-In-Date Check-Out-Date BookingRooms"):
+Here are the sample orders input from file stream (with format of "ClientName BrandName Check-In-Date Check-Out-Date BookingRooms"):<br/>
 AAA JW 2019-04-05 2019-04-10 300<br/>
 BBB JW 2019-04-05 2019-04-07 100<br/>
 CCC LR 2019-04-01 2019-04-05 200<br/>
 
-Here are some test cases with expected output result:
-AAA JW 2019-04-01 2019-04-02 380
-Output:
-AAA JW 380
+Here are some test cases with expected output result:<br/>
+AAA JW 2019-04-01 2019-04-02 380<br/>
+Output:<br/>
+AAA JW 380<br/>
 
-AAA JW 2019-04-05 2019-04-10 401
-Output:
-Invalid
+AAA JW 2019-04-05 2019-04-10 401<br/>
+Output:<br/>
+Invalid<br/>
 
-AAA JW 2019-04-01 2019-04-02 380
-BBB JW 2019-04-02 2019-04-04 21
-Output:
-Invalid
+AAA JW 2019-04-01 2019-04-02 380<br/>
+BBB JW 2019-04-02 2019-04-04 21<br/>
+Output:<br/>
+Invalid<br/>
 
-AAA JW 2019-04-01 2019-04-02 380
-BBB JW 2019-04-03 2019-04-04 21
-CCC KQ 2019-04-03 2019-04-04 450
-Output:
-AAA JW 380
-BBB JW 21
-CCC KQ 450
+AAA JW 2019-04-01 2019-04-02 380<br/>
+BBB JW 2019-04-03 2019-04-04 21<br/>
+CCC KQ 2019-04-03 2019-04-04 450<br/>
+Output:<br/>
+AAA JW 380<br/>
+BBB JW 21<br/>
+CCC KQ 450<br/>
